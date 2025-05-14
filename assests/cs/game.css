@@ -1,0 +1,48 @@
+/* ─── Game container ───────────────────────────────────────── */
+#game-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin: 2rem auto;
+  background: url("https://images3.alphacoders.com/126/thumb-1920-1269904.png")
+    center/cover no-repeat;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+
+/* ─── Platform blocks ──────────────────────────────────────── */
+.platform {
+  position: absolute;
+  width: 128px;
+  height: 32px;
+  background: url("https://labs.phaser.io/assets/sprites/platform.png") repeat-x;
+}
+
+/* ─── Trophies (stars) ────────────────────────────────────── */
+.trophy {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("https://labs.phaser.io/assets/demoscene/star.png") no-repeat
+    center/contain;
+}
+
+/* ─── Player sprite ───────────────────────────────────────── */
+#player {
+  position: absolute;
+  width: 32px;
+  height: 48px;
+  background: url("https://labs.phaser.io/assets/sprites/dude.png") no-repeat 0
+    0;
+  image-rendering: pixelated;
+}
+
+/* ─── HUD ─────────────────────────────────────────────────── */
+#hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font: 20px sans-serif;
+  color: #000;
+  z-index: 1000;
+}

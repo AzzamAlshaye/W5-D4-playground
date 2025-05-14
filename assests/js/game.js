@@ -51,14 +51,17 @@
   new Phaser.Game(config);
 
   function preload() {
-    this.load.image("sky", "https://labs.phaser.io/assets/skies/sky.png");
+    this.load.image(
+      "sky",
+      "https://images3.alphacoders.com/126/thumb-1920-1269904.png"
+    );
     this.load.image(
       "ground",
       "https://labs.phaser.io/assets/sprites/platform.png"
     );
     this.load.image(
       "trophy",
-      "https://labs.phaser.io/assets/demoscene/star.png"
+      "https://png.pngtree.com/png-vector/20220824/ourmid/pngtree-star-png-vector-icon-ui-game-png-image_6121753.png"
     );
     this.load.spritesheet(
       "player",
@@ -111,9 +114,14 @@
       repeat: cfg.repeat,
       setXY: { x: cfg.startX, y: cfg.startY, stepX: cfg.stepX },
     });
-    this.trophies.children.iterate((c) => {
-      c.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
+    this.trophies.children.iterate((trophy) => {
+      // give it a little bounce…
+      trophy.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+      // …and scale it down to 50%
+      trophy.setScale(0.2);
     });
+
     this.physics.add.collider(this.trophies, this.platforms);
     this.physics.add.overlap(
       this.player,
@@ -168,7 +176,7 @@
         collectedThisLevel = 0;
         this.scene.restart(); // reload with next level
       } else {
-        this.add.text(300, 250, "🎉 YOU WIN! 🎉", {
+        this.add.text(160, 250, "🎉 YOU WIN! 🎉", {
           fontSize: "48px",
           fill: "#000",
         });
