@@ -46,7 +46,7 @@ submitButton.addEventListener("click", async (e) => {
     localStorage.setItem("userId", userRecord.id);
 
     alert("Login successful!");
-    window.location.href = "./index.html";
+    window.location.href = "./game.html";
   } catch (err) {
     console.error("Login error:", err);
     alert("An error occurred. Check console for details.");
