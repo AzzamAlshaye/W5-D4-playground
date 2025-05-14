@@ -1,5 +1,5 @@
 // register.js
-const apiUrl = "https://68219a92259dad2655afc3d3.mockapi.io";
+const apiUrl = "https://68243c9365ba0580339965d9.mockapi.io";
 const usernameInput = document.getElementById("su-username");
 const passwordInput = document.getElementById("su-password");
 const confirmInput = document.getElementById("confirmPassword");
