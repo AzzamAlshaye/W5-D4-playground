@@ -149,11 +149,17 @@
       const e = this.enemies
         .create(pos.x, pos.y, "goomba")
         .setScale(0.1)
-        .setCollideWorldBounds(true)
-        .setVelocityX(Phaser.Math.Between(-80, 80));
-      e.body.allowGravity = false;
-      e.setBounce(1, 0);
+        .setCollideWorldBounds(true);
+      // give it a random left/right patrol speed
+      e.setVelocityX(Phaser.Math.Between(-80, 80));
+
+      // (optional) give it an initial upward kick so it immediately bounces:
+      e.setVelocityY(-Phaser.Math.Between(50, 100));
+      e.body.allowGravity = true;
+      e.setBounce(1, 0.4);
     });
+    // allow Goombas to land & bounce on platforms:
+    this.physics.add.collider(this.enemies, this.platforms);
     this.physics.add.collider(this.player, this.enemies, hitEnemy, null, this);
 
     // 8) controls & HUD
