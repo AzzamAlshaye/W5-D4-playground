@@ -212,7 +212,7 @@
   function hitEnemy(player, enemy) {
     if (player.body.velocity.y > 0) {
       enemy.disableBody(true, true);
-      player.setVelocityY(-150);
+      player.setVelocityY(-200);
     } else {
       triggerDeath.call(this);
     }
