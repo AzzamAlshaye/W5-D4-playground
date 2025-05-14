@@ -1,0 +1,81 @@
+body {
+  background-color: #e4ecef;
+  color: #000; /* make sure text is readable */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 3rem;
+}
+
+/* 1. Navbar background */
+.navbar-main {
+  background-color: #016a9f; /* Dark Teal */
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* 2. Link colors */
+.navbar-main .nav-link {
+  color: #fcf6e9; /* Cream */
+}
+#nav-user {
+  font-size: 1.2rem;
+  color: white;
+}
+/* 3. Toggler color */
+.navbar-main .navbar-toggler {
+  border-color: #f9edd2;
+}
+.navbar-main .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* btns */
+.btn-main {
+  background-color: rgb(39, 60, 199);
+  color: rgb(255, 255, 255);
+  padding: 0.45rem 1.5rem 0.35rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s;
+  border: none;
+}
+.btn-delete {
+  background-color: rgb(182, 1, 1);
+  color: rgb(255, 255, 255);
+  padding: 0.45rem 1.5rem 0.35rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+/* hero section  */
+
+.form-div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.form-card {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #eaf0f3;
+  box-shadow: 0 1px 3px rgb(0, 0, 0); /* Subtle shadow */
+  border-radius: 4px;
+  padding: 0.5rem;
+  text-align: center;
+  height: 20rem;
+  width: 30rem;
+}
+.shadow-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.492); /* Subtle shadow */
+}
+
+@media (max-width: 576px) {
+  .form-card {
+    padding: 1.5rem;
+    width: 80%;
+  }
+}
